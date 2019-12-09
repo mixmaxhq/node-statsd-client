@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 const args = process.argv;
 
-let SDC = require('../lib/statsd-client'),
+const SDC = require('../lib/statsd-client'),
   sdc = new SDC({
     host: 'localhost',
     prefix: args[2] || 'data.generator',
-  }),
-  rand,
+  });
+
+let rand,
   time = new Date(),
   iterations = 0;
 

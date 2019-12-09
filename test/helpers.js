@@ -5,7 +5,7 @@ const StatsDClient = require('../lib/statsd-client'),
   supertest = require('supertest'),
   sinon = require('sinon');
 
-/*global describe before it*/
+/*global after before*/
 
 describe('Helpers', function() {
   let c;
@@ -94,7 +94,7 @@ describe('Helpers', function() {
           .get('/')
           .expect(200)
           .end(function(err /*, res*/) {
-            if (err) return done(err);
+            if (err) return void done(err);
             s.expectMessage('express.response_code.200:1|c', done);
           });
       });
@@ -104,7 +104,7 @@ describe('Helpers', function() {
           .get('/')
           .expect(200)
           .end(function(err /*, res*/) {
-            if (err) return done(err);
+            if (err) return void done(err);
             s.expectMessage('express.response_code.GET_root.200:1|c', done);
           });
       });
@@ -114,7 +114,7 @@ describe('Helpers', function() {
           .get('/')
           .expect(200)
           .end(function(err /*, res*/) {
-            if (err) return done(err);
+            if (err) return void done(err);
             s.expectMessage('express.response_time.GET_root:0|ms', done);
           });
       });
@@ -124,7 +124,7 @@ describe('Helpers', function() {
           .get('/foo')
           .expect(200)
           .end(function(err /*, res*/) {
-            if (err) return done(err);
+            if (err) return void done(err);
             s.expectMessage('express.response_time.GET_foo:0|ms', done);
           });
       });
@@ -134,7 +134,7 @@ describe('Helpers', function() {
           .get('/foo/mydynamicparameter/bar')
           .expect(200)
           .end(function(err /*, res*/) {
-            if (err) return done(err);
+            if (err) return void done(err);
             s.expectMessage('express.response_time.GET_foo_param_bar:0|ms', done);
           });
       });
@@ -145,7 +145,7 @@ describe('Helpers', function() {
             .get('/subrouter/test/foo')
             .expect(200)
             .end(function(err /*, res*/) {
-              if (err) return done(err);
+              if (err) return void done(err);
               s.expectMessage('express.response_time.GET_subrouter_param_foo:0|ms', done);
             });
         });
@@ -155,7 +155,7 @@ describe('Helpers', function() {
             .get('/subrouter/test_param/foo/test_sub_param')
             .expect(200)
             .end(function(err /*, res*/) {
-              if (err) return done(err);
+              if (err) return void done(err);
               s.expectMessage('express.response_time.GET_subrouter_param_foo_subparam:0|ms', done);
             });
         });
@@ -168,7 +168,7 @@ describe('Helpers', function() {
           .post('/foo')
           .expect(200)
           .end(function(err /*, res*/) {
-            if (err) return done(err);
+            if (err) return void done(err);
             s.expectMessage('express.response_time.POST_foo:0|ms', done);
           });
       });

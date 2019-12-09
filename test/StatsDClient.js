@@ -4,7 +4,7 @@ const StatsDClient = require('../lib/statsd-client'),
   FakeServer = require('./FakeServer'),
   assert = require('chai').assert;
 
-/*global describe before it after*/
+/*global before after*/
 
 describe('StatsDClient', function() {
   describe('Namespaces', function() {

@@ -40,7 +40,7 @@ MessageCollector.prototype.checkMessages = function() {
       // Remove message and the listener from their respective lists
       that._packetsReceived.splice(i, 1);
       that._expectedPackets.splice(detailIndex, 1);
-      return details.callback();
+      details.callback();
     }
   });
 };

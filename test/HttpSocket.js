@@ -6,7 +6,7 @@ const HttpSocket = require('../lib/HttpSocket'),
   MessageCollector = require('./messageCollector'),
   assert = require('chai').assert;
 
-/*global describe before it after*/
+/*global before after*/
 
 describe('HttpSocket', function() {
   let s, e, messages, lastHeaders;
