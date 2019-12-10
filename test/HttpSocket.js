@@ -56,7 +56,7 @@ describe('HttpSocket', function() {
     messages.expectMessage(
       'do_not_buffer',
       function() {
-        assert.closeTo(Date.now() - start, 0, 25);
+        assert.closeTo(Date.now() - start, 0, 100);
         withoutBuffer.close();
         done();
       },
