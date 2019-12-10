@@ -1,5 +1,8 @@
 {
   "author": "Morten Siebuhr <sbhr@sbhr.dk>",
+  "contributors": [
+    "Eli Skeggs <eli@mixmax.com> (https://mixmax.com)"
+  ],
   "name": "@mixmaxhq/statsd-client",
   "description": "Yet another client for Etsy's statsd",
   "keywords": [
@@ -10,11 +13,11 @@
     "tcp"
   ],
   "version": "0.4.3",
-  "homepage": "https://github.com/msiebuhr/node-statsd-client",
-  "bugs": "https://github.com/msiebuhr/node-statsd-client/issues",
+  "homepage": "https://github.com/mixmaxhq/node-statsd-client",
+  "bugs": "https://github.com/mixmaxhq/node-statsd-client/issues",
   "repository": {
     "type": "git",
-    "url": "git://github.com/msiebuhr/node-statsd-client.git"
+    "url": "git://github.com/mixmaxhq/node-statsd-client.git"
   },
   "main": "lib/statsd-client.js",
   "devDependencies": {
